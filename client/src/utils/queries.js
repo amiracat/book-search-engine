@@ -17,9 +17,6 @@ export const QUERY_ME = gql`
 `;
 
 
-
-
-
 // REVISE BELOW
 // export const QUERY_USERS = gql`
 //   query user {
