@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 // possibly need to modify query me line 4
-export const QUERY_ME = gql`
+export const GET_ME = gql`
   query me {
     _id
     email
