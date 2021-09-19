@@ -2,19 +2,19 @@ import { gql } from '@apollo/client';
 
 
 export const SAVE_BOOK = gql`
-  mutation saveBook($body: saveBookInput!) {
-    saveBook(body: $body) {
+  mutation saveBook($bookData: saveBookInput!) {
+    saveBook(bookData: $bookData) {
       _id
       username
       email
       bookCount
       savedBooks {
-          author
-          description
-          image
-          link
-          title
-          bookId
+        bookId
+        author
+        description
+        image
+        link
+        title      
       }
     }
   }
@@ -26,7 +26,6 @@ export const REMOVE_BOOK = gql`
       _id
       username
       email
-      bookCount
       savedBooks {
         author
         description
