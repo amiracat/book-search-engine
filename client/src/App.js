@@ -1,10 +1,11 @@
 import React from 'react';
 import {
+  ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-import { ApolloClient } from 'apollo-boost';
+// import { ApolloClient } from 'apollo-boost';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
@@ -28,7 +29,6 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  // uri: '/graphql',
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
