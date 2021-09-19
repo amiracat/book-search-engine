@@ -7,8 +7,12 @@ This Book Search Engine uses the Google Books API and is built with the MERN Sta
 Technologies include:
 
 MongoDB
+
 Express.js
+
 React.js
+
 Node.js
 
-This app is currently in progress. Stay tuned.
+
+This app is currently in progress. Stay tuned. For questions please contact amiracat at amiraholden@gmail.com
