@@ -7,8 +7,6 @@ import { REMOVE_BOOK } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
-
-let deleteBook;
 let setUserData;
 
 const SavedBooks = () => {
