@@ -41,7 +41,7 @@ input saveBookInput {
     bookId: String
     image: String
     link: String
-    author: String
+    authors: [String]
 }
 `;
 
