@@ -1,7 +1,7 @@
 const { User } = require('../models');
 
 const { AuthenticationError } = require('apollo-server-express');
-const { signToken } = require('..utils/auth');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -56,7 +56,7 @@ const resolvers = {
     RemoveBook: async (parent, args, { user }) => {
       const updatedUser = await User.findOneAndUpdate(
         { _id: user._id },
-        { $pull: { savedBooks: { bookId: args.bookId} } },
+        { $pull: { savedBooks: { bookId: args.bookId } } },
         { new: true }
       );
       if (!updatedUser) {
